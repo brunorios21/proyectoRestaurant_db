@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Catálogo - Delicious Orders{% endblock %}
+
+{% block content %}
+<section>
+    <h1>Catálogo</h1>
+    <form method="POST" action="{{ url_for('catalogo') }}">
+        <div class="productos">
+            {% for producto in productos %}
+            <div class="producto">
+                <input type="checkbox" name="productos" value="{{ producto.id }}" id="producto-{{ producto.id }}">
+                <label for="producto-{{ producto.id }}">
+                    <h2>{{ producto.nombre }}</h2>
+                    <p>{{ producto.descripcion }}</p>
+                    <p class="precio">Precio: ${{ producto.precio }}</p>
+                </label>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="form-group">
+            <label for="metodo_pago">Método de Pago</label>
+            <select name="metodo_pago" id="metodo_pago" class="form-control">
+                <option value="tarjeta">Tarjeta</option>
+                <option value="efectivo">Efectivo</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Crear Pedido</button>
+    </form>
+</section>
+{% endblock %}

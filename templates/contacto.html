@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Contacto - Delicious Orders{% endblock %}
+
+{% block content %}
+<section>
+    <h1>Contacto</h1>
+    <form method="POST" action="{{ url_for('contacto') }}">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.nombre.label }}
+            {{ form.nombre(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.email.label }}
+            {{ form.email(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.mensaje.label }}
+            {{ form.mensaje(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+</section>
+{% endblock %}

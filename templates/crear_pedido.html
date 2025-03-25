@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Crear Pedido - Delicious Orders{% endblock %}
+
+{% block content %}
+<section>
+    <h1>Crear Pedido</h1>
+    <form method="POST" action="{{ url_for('crear_pedido') }}">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.cliente.label }}
+            {{ form.cliente(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.direccion.label }}
+            {{ form.direccion(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.metodo_pago.label }}
+            {{ form.metodo_pago(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.producto_nombre.label }}
+            {{ form.producto_nombre(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.producto_precio.label }}
+            {{ form.producto_precio(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+</section>
+{% endblock %}

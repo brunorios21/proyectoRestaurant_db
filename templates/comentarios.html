@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Comentarios - Delicious Orders{% endblock %}
+
+{% block content %}
+<section>
+    <h1>Comentarios</h1>
+    <ul>
+        {% for comentario in comentarios %}
+        <li>
+            <strong>{{ comentario.nombre }}</strong> - {{ comentario.rating }} estrellas
+            <p>{{ comentario.comentario }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página no encontrada</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Página no encontrada</h1>
+    </header>
+    <section>
+        <p>Lo sentimos, la página que estás buscando no existe.</p>
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Volver al inicio</a>
+    </section>
+</body>
+</html>

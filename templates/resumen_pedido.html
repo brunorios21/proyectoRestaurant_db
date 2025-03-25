@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Resumen del Pedido - Delicious Orders{% endblock %}
+
+{% block content %}
+<section>
+    <h1>Resumen del Pedido</h1>
+    <ul>
+        {% for id in selected_products %}
+        <li>{{ productos[int(id) - 1].nombre }} - ${{ productos[int(id) - 1].precio }}</li>
+        {% endfor %}
+    </ul>
+    <p>Total: ${{ total_price }}</p>
+    <p>Método de Pago: {{ metodo_pago }}</p>
+    <a href="{{ url_for('catalogo') }}" class="btn btn-secondary">Editar Pedido</a>
+    <a href="{{ url_for('crear_pedido') }}" class="btn btn-primary">Confirmar Pedido</a>
+</section>
+{% endblock %}

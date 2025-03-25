@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <header>
+        <h1>Servicios del Restaurante</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/about">Acerca de</a></li>
+                <li><a href="/services">Servicios</a></li>
+                <li><a href="/menu">Menú</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>¿Qué ofrecemos?</h2>
+        <p>Ofrecemos una variedad de platos deliciosos, un servicio a domicilio eficiente y un ambiente acogedor para todos nuestros clientes.</p>
+        <button id="menu-button">Mostrar Menú</button>
+        <div id="menu-list" class="hidden">
+            <div id="menu-container"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Restaurante XYZ. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

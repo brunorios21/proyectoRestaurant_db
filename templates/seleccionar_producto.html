@@ -1,0 +1,20 @@
+<form method="POST" action="{{ url_for('seleccionar_producto') }}">
+    <input type="hidden" name="producto_nombre" value="{{ producto.nombre }}">
+    <input type="hidden" name="producto_precio" value="{{ producto.precio }}">
+    <p>
+        <label for="cliente">Nombre del Cliente:</label><br>
+        <input type="text" id="cliente" name="cliente" required>
+    </p>
+    <p>
+        <label for="direccion">Dirección:</label><br>
+        <input type="text" id="direccion" name="direccion" required>
+    </p>
+    <p>
+        <label for="metodo_pago">Método de Pago:</label><br>
+        <select id="metodo_pago" name="metodo_pago" required>
+            <option value="Efectivo">Efectivo</option>
+            <option value="Tarjeta">Tarjeta</option>
+        </select>
+    </p>
+    <button type="submit">Confirmar Pedido</button>
+</form>

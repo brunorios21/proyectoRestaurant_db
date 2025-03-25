@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Detalle al Pedido</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Agregar Detalle al Pedido</h1>
+    </header>
+    <section>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.producto_id.label }}<br>
+                {{ form.producto_id() }}
+            </p>
+            <p>
+                {{ form.cantidad.label }}<br>
+                {{ form.cantidad() }}
+            </p>
+            <p>
+                {{ form.precio.label }}<br>
+                {{ form.precio() }}
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
+    </section>
+</body>
+</html>
