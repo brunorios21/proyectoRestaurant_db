@@ -14,12 +14,12 @@ Sistema de gestión para restaurantes desarrollado con Flask, PostgreSQL y Docke
 
 ---
 
-## 🍽️ Descripción del Proyecto
+## Descripción del Proyecto
 > Proyecto web que digitaliza la administración de un restaurante: gestión de stock, pedidos, productos, usuarios y reportes diarios. Pensado para PyMEs gastronómicas, con un entorno portable, escalable y profesional.
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 ```bash
 proyectoRestaurant_db/
 ├── app.py                  # Punto de entrada de la app Flask
@@ -36,7 +36,7 @@ proyectoRestaurant_db/
 └── README.md               # Este archivo
 ---
 
-## ⚙️ Tecnologías Usadas
+## Tecnologías Usadas
 
 | 🔧 Tecnología | 💡 Descripción                          |
 | ------------- | --------------------------------------- |
@@ -49,16 +49,16 @@ proyectoRestaurant_db/
 
 ---
 
-## 🚀 Cómo levantar el proyecto con Docker
+##Cómo levantar el proyecto con Docker
 
-### 🧱 1. Clonar el repositorio
+### 1. Clonar el repositorio
 
 ```bash
 git clone https://github.com/brunorios21/proyectoRestaurant_db.git
 cd proyectoRestaurant_db
 ```
 
-### 🛠️ 2. Configurar archivo `.env`
+###  2. Configurar archivo `.env`
 
 Crear un archivo `.env` con el siguiente contenido:
 
@@ -80,7 +80,7 @@ docker-compose up --build
 
 ---
 
-## ⚗️ Migraciones de Base de Datos (Alembic)
+##  Migraciones de Base de Datos (Alembic)
 
 Crear una nueva migración:
 
