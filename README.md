@@ -1,7 +1,4 @@
----
-
 <!-- Encabezado centrado con badges visuales -->
-
 <p align="center">
   <img src="https://img.shields.io/badge/Flask-2.3-blue?logo=flask" />
   <img src="https://img.shields.io/badge/PostgreSQL-17.4-blue?logo=postgresql" />
@@ -13,32 +10,30 @@
 
 <p align="center">
 Sistema de gestión para restaurantes desarrollado con Flask, PostgreSQL y Docker.
-</p>---
+</p>
+
+---
 
 ## 🍽️ Descripción del Proyecto
-
-> Proyecto web que digitaliza la administración de un restaurante: gestión de stock, pedidos, productos, usuarios y reportes diarios. Está pensado para PyMEs gastronómicas, con un entorno portable, escalable y profesional.
+> Proyecto web que digitaliza la administración de un restaurante: gestión de stock, pedidos, productos, usuarios y reportes diarios. Pensado para PyMEs gastronómicas, con un entorno portable, escalable y profesional.
 
 ---
 
 ## 📁 Estructura del Proyecto
-
 ```bash
 proyectoRestaurant_db/
-├── app.py                  # Punto de entrada principal de la app Flask
-├── alembic/                # Archivos de migración de base de datos
-├── migrations/             # Migraciones generadas por Alembic
-├── static/                 # Archivos CSS, JS, imágenes
-├── templates/              # Plantillas HTML con Jinja2
-├── env.py                  # Configuración de migraciones Alembic
-├── .env                    # Variables de entorno (no versionado)
-├── Dockerfile              # Imagen Docker de la app
-├── docker-compose.yml      # Orquestación de servicios Flask + PostgreSQL
+├── app.py                  # Punto de entrada de la app Flask
+├── alembic/                # Configuración de migraciones
+├── migrations/             # Archivos generados por Alembic
+├── static/                 # Archivos estáticos (CSS, JS)
+├── templates/              # Plantillas HTML (Jinja2)
+├── env.py                  # Configuración Alembic
+├── .env                    # Variables de entorno
+├── Dockerfile              # Imagen Docker
+├── docker-compose.yml      # Servicios Flask + PostgreSQL
 ├── requirements.txt        # Dependencias Python
-├── backup.sql              # Backup manual de la base PostgreSQL
+├── backup.sql              # Dump de la base de datos
 └── README.md               # Este archivo
-````
-
 ---
 
 ## ⚙️ Tecnologías Usadas
