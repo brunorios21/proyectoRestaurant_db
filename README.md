@@ -1,17 +1,33 @@
+---
 
+### ✅ README profesional con color, íconos y visuales mejorados
 
-```markdown
-# 🍽️ proyectoRestaurant_db
+````markdown
+<div align="center">
 
-Sistema de gestión para restaurantes desarrollado con Flask y PostgreSQL, contenedorizado con Docker y migraciones gestionadas con Alembic. Este proyecto busca optimizar procesos como el control de stock, pedidos, usuarios y reportes diarios de una manera escalable, moderna y eficiente.
+<img src="https://img.shields.io/badge/Flask-2.3-blue?logo=flask" />
+<img src="https://img.shields.io/badge/PostgreSQL-17.4-blue?logo=postgresql" />
+<img src="https://img.shields.io/badge/Docker-ready-blue?logo=docker" />
+<img src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+
+# 🍔 **Delicias Order · `restaurant_db`**
+Sistema de gestión para restaurantes  
+📦 Contenedorizado con Docker · ⚙️ Backend con Flask · 🐘 Base de datos PostgreSQL  
+
+</div>
 
 ---
 
-## 📂 Estructura general del proyecto
+## 🍽️ Descripción del Proyecto
 
-```
+> Proyecto web que digitaliza la administración de un restaurante: gestión de stock, pedidos, productos, usuarios y reportes diarios. Está pensado para PyMEs gastronómicas, con un entorno portable, escalable y profesional.
 
-proyectoRestaurant\_db/
+---
+
+## 📁 Estructura del Proyecto
+
+```bash
+proyectoRestaurant_db/
 ├── app.py                  # Punto de entrada principal de la app Flask
 ├── alembic/                # Archivos de migración de base de datos
 ├── migrations/             # Migraciones generadas por Alembic
@@ -24,68 +40,63 @@ proyectoRestaurant\_db/
 ├── requirements.txt        # Dependencias Python
 ├── backup.sql              # Backup manual de la base PostgreSQL
 └── README.md               # Este archivo
-
 ````
 
 ---
 
-## ⚙️ Tecnologías utilizadas
+## ⚙️ Tecnologías Usadas
 
-| Tecnología     | Descripción                                 |
-|----------------|---------------------------------------------|
-| 🐍 Flask        | Framework liviano para backend en Python    |
-| 🐘 PostgreSQL   | Base de datos relacional                   |
-| 🐳 Docker       | Contenedores y orquestación de servicios   |
-| ⚗️ Alembic      | Herramienta de migraciones SQLAlchemy      |
-| 🌐 Bootstrap    | Interfaz moderna y responsiva              |
-| 🧪 Jinja2       | Motor de plantillas para HTML dinámico     |
+| 🔧 Tecnología | 💡 Descripción                          |
+| ------------- | --------------------------------------- |
+| 🐍 Flask      | Framework backend ligero en Python      |
+| 🐘 PostgreSQL | Base de datos relacional                |
+| 🐳 Docker     | Contenedores y despliegue reproducible  |
+| ⚗️ Alembic    | Migraciones de base de datos SQLAlchemy |
+| 🌐 Bootstrap  | Interfaz responsiva y moderna           |
+| 🧪 Jinja2     | Motor de plantillas para HTML dinámico  |
 
 ---
 
-## 🚀 Instrucciones para levantar el proyecto con Docker
+## 🚀 Cómo levantar el proyecto con Docker
 
-### 1. Clonar el repositorio
+### 🧱 1. Clonar el repositorio
 
 ```bash
 git clone https://github.com/brunorios21/proyectoRestaurant_db.git
 cd proyectoRestaurant_db
-````
-
-### 2. Crear el archivo `.env`
-
-Crear un archivo llamado `.env` en la raíz del proyecto con el siguiente contenido:
-
 ```
+
+### 🛠️ 2. Configurar archivo `.env`
+
+Crear un archivo `.env` con el siguiente contenido:
+
+```env
 FLASK_ENV=development
 DATABASE_URL=postgresql://postgres:postgres@db:5432/restaurant_db
 SECRET_KEY=clave_super_secreta
 ```
 
-### 3. Levantar el entorno con Docker Compose
+### 🐳 3. Levantar con Docker Compose
 
 ```bash
 docker-compose up --build
 ```
 
-Este comando:
-
-* Construye la imagen de Flask usando el `Dockerfile`
-* Levanta el contenedor de la aplicación
-* Inicia un contenedor de PostgreSQL si está definido en `docker-compose.yml`
+✔️ Construye la imagen Flask
+✔️ Levanta la app y la base de datos PostgreSQL
+✔️ Inicia servicios desde `docker-compose.yml`
 
 ---
 
-## ⚗️ Migraciones de base de datos
+## ⚗️ Migraciones de Base de Datos (Alembic)
 
-El proyecto utiliza **Alembic** para el control de versiones de la base de datos.
-
-### Crear una nueva migración
+Crear una nueva migración:
 
 ```bash
-alembic revision -m "nombre_de_la_migracion"
+alembic revision -m "nombre_migracion"
 ```
 
-### Aplicar las migraciones
+Aplicar migraciones:
 
 ```bash
 alembic upgrade head
@@ -93,50 +104,53 @@ alembic upgrade head
 
 ---
 
-## ✅ Funcionalidades implementadas
+## ✅ Funcionalidades Implementadas
 
-* [x] ABM de productos
-* [x] Registro de pedidos y su estado
-* [x] Control de stock
-* [x] Gestión de usuarios
-* [x] Backup manual (`backup.sql`)
-* [x] Migraciones con Alembic
+* ✅ ABM de productos
+* ✅ Registro y estado de pedidos
+* ✅ Control y movimientos de stock
+* ✅ Gestión de usuarios
+* ✅ Backups manuales (`backup.sql`)
+* ✅ Migraciones con Alembic
 
 ---
 
-## 📋 Requisitos del sistema
+## 📋 Requisitos
 
 * Python 3.11+
 * PostgreSQL 17.4+
-* Docker y Docker Compose
-* Navegador moderno
-
----
-
-## 🧪 Tests
-
-🧪 *Pendiente* — Se planifica agregar pruebas unitarias con `pytest`.
+* Docker + Docker Compose
+* Navegador moderno (Chrome, Firefox, etc.)
 
 ---
 
 ## 🔐 Seguridad
 
-* Variables sensibles se cargan desde `.env`
-* Contraseñas deben ser hasheadas (`werkzeug.security`)
-* Rutas protegidas por login y roles
+🔑 Variables sensibles en `.env`
+🔐 Contraseñas hasheadas (`werkzeug.security`)
+🛡️ Rutas protegidas por login y roles
+
+---
+
+## 🧪 Pruebas
+
+> ⚠️ *En desarrollo* — Próximamente tests unitarios con `pytest`.
 
 ---
 
 ## 🧑‍💻 Autor
-##Bruno Rios
-📫 brunorioscorp4@gmail.com
-💼 LinkedIn
-🌐 Proyecto asociado: Delicius Order---
+
+**Bruno Ríos**
+📫 [brunorioscorp4@gmail.com](mailto:brunorioscorp4@gmail.com)
+💼 [LinkedIn](https://www.linkedin.com/in/bruno-rios-576016328/)
+🌐 Proyecto asociado: **Delicias Order**
+
+---
 
 ## 🪪 Licencia
 
-Distribuido bajo la licencia MIT. Ver `LICENSE` para más información.
+Distribuido bajo la licencia MIT.
+Consultá el archivo [`LICENSE`](./LICENSE) para más detalles.
 
 ```
-
 ---
