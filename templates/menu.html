@@ -1,4 +1,3 @@
-<!-- filepath: /Users/martinalevczuk/Desktop/proyecto base de datos/templates/menu.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -21,19 +20,33 @@
     </header>
 
     <section>
-        <h2>Nuestros Platillos</h2>
-        <!-- Aquí mostramos los productos dinámicamente -->
-        <ul>
-            {% for producto in productos %}
-                <li>
-                    <h3>{{ producto.nombre }} - ${{ producto.precio }}</h3>
-                    <p>{{ producto.descripcion }}</p>
-                    <button>Haz tu pedido</button>
-                </li>
-            {% else %}
-                <li>No hay productos disponibles en el menú.</li>
-            {% endfor %}
-        </ul>
+        <h2>Crear Pedido</h2>
+        <form method="POST" action="/crear_pedido">
+            <input type="text" name="nombre" placeholder="Nombre de usuario" required class="form-control">
+            <input type="email" name="email" placeholder="Correo electrónico" required class="form-control">
+            <input type="tel" name="telefono" placeholder="Teléfono de contacto" required class="form-control">
+
+            <select name="entrada" class="form-control" required>
+                <option value="">Selecciona una entrada</option>
+                <option>Bruschettas</option>
+                <option>Empanadas</option>
+                <option>Ensalada César</option>
+            </select>
+            <select name="plato" class="form-control" required>
+                <option value="">Selecciona un plato principal</option>
+                <option>Pizza Margarita</option>
+                <option>Hamburguesa Gourmet</option>
+                <option>Pasta Alfredo</option>
+                <option>Lasaña</option>
+            </select>
+            <select name="bebida" class="form-control" required>
+                <option value="">Selecciona una bebida</option>
+                <option>Limonada</option>
+                <option>Cerveza Artesanal</option>
+                <option>Vino Tinto</option>
+            </select>
+            <button type="submit" class="btn btn-primary mt-3">Enviar Pedido</button>
+        </form>
     </section>
 
     <footer>

@@ -1,19 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de Nosotros</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
-    <header>
-        <h1>Acerca de Nosotros</h1>
-    </header>
-    <section>
-        <p>Somos un restaurante dedicado a ofrecer la mejor comida con ingredientes frescos y de calidad.</p>
-        <p>Nuestra misión es brindar una experiencia gastronómica inolvidable.</p>
-        <a href="{{ url_for('index') }}" class="boton">Volver al Inicio</a>
-    </section>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Acerca de{% endblock %}
+{% block content %}
+<section class="form-section about-section">
+    <h2 class="about-title">Sobre Nosotros</h2>
+    <p class="about-text">
+        En <strong>Delicious Orders</strong> nos apasiona la excelencia culinaria y el servicio al cliente.<br><br>
+        Nuestro equipo de chefs y profesionales trabaja cada día para ofrecerte platos frescos, sabrosos y presentados con creatividad.<br><br>
+        <span class="about-highlight">¿Por qué elegirnos?</span>
+        <ul class="about-list">
+            <li>Atención personalizada y rápida</li>
+            <li>Ingredientes frescos y de primera calidad</li>
+            <li>Variedad de platos para todos los gustos</li>
+            <li>Pedidos online fáciles y seguros</li>
+            <li>Compromiso con la satisfacción del cliente</li>
+            <li>Promociones exclusivas para clientes frecuentes</li>
+            <li>Envíos puntuales y seguimiento en tiempo real</li>
+        </ul>
+        <span class="about-cta">¡Gracias por elegirnos! Tu próxima experiencia deliciosa comienza aquí.</span>
+    </p>
+</section>
+{% endblock %}

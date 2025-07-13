@@ -1,35 +1,38 @@
 {% extends "base.html" %}
 
-{% block title %}Crear Pedido - Delicious Orders{% endblock %}
+{% block title %}Crear Pedido{% endblock %}
 
 {% block content %}
 <section>
-    <h1>Crear Pedido</h1>
-    <form method="POST" action="{{ url_for('crear_pedido') }}">
+    <h2>Crear Pedido</h2>
+    <form method="POST">
         {{ form.hidden_tag() }}
-        <div class="form-group">
-            {{ form.cliente.label }}
-            {{ form.cliente(class="form-control") }}
-        </div>
-        <div class="form-group">
-            {{ form.direccion.label }}
-            {{ form.direccion(class="form-control") }}
-        </div>
-        <div class="form-group">
-            {{ form.metodo_pago.label }}
-            {{ form.metodo_pago(class="form-control") }}
-        </div>
-        <div class="form-group">
-            {{ form.producto_nombre.label }}
-            {{ form.producto_nombre(class="form-control") }}
-        </div>
-        <div class="form-group">
-            {{ form.producto_precio.label }}
-            {{ form.producto_precio(class="form-control") }}
-        </div>
-        <div class="form-group">
-            {{ form.submit(class="btn btn-primary") }}
-        </div>
+        <input type="text" name="cliente" placeholder="Nombre de usuario" required class="form-control">
+        <input type="text" name="direccion" placeholder="Dirección" required class="form-control">
+
+        <select name="entrada" class="form-control" required>
+            <option value="">Selecciona una entrada</option>
+            {% for entrada in entradas %}
+                <option value="{{ entrada.nombre }}">{{ entrada.nombre }}</option>
+            {% endfor %}
+        </select>
+        <select name="plato" class="form-control" required>
+            <option value="">Selecciona un plato principal</option>
+            {% for plato in platos %}
+                <option value="{{ plato.nombre }}">{{ plato.nombre }}</option>
+            {% endfor %}
+        </select>
+        <select name="bebida" class="form-control" required>
+            <option value="">Selecciona una bebida</option>
+            {% for bebida in bebidas %}
+                <option value="{{ bebida.nombre }}">{{ bebida.nombre }}</option>
+            {% endfor %}
+        </select>
+
+        {{ form.metodo_pago.label }}
+        {{ form.metodo_pago(class="form-control") }}
+
+        <button type="submit" class="btn btn-primary mt-3">Realizar Pedido</button>
     </form>
 </section>
 {% endblock %}

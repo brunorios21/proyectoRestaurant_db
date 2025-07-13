@@ -2,7 +2,7 @@
 CREATE DATABASE restaurant_db;
 
 -- Seleccionar la base de datos (para PostgreSQL, en SQLite esto no es necesario)
-\c restaurant_db;
+-- \c restaurant_db; -- Este comando es específico de PostgreSQL y no es SQL estándar.
 
 -- Tabla de Usuarios
 CREATE TABLE Usuarios (
@@ -28,7 +28,10 @@ CREATE TABLE Productos (
 CREATE TABLE Pedidos (
     id SERIAL PRIMARY KEY,
     usuario_id INT REFERENCES Usuarios(id),
-    total DECIMAL(10,2) NOT NULL,
+    cliente VARCHAR(100) NOT NULL,
+    direccion VARCHAR(200) NOT NULL,
+    metodo_pago VARCHAR(50) NOT NULL,
+    total_precio DECIMAL(10,2) NOT NULL, -- Cambiado de "total" a "total_precio"
     estado VARCHAR(50) CHECK (estado IN ('pendiente', 'preparando', 'entregado')) DEFAULT 'pendiente',
     creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

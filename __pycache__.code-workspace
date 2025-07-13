@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "__pycache__"
+		},
+		{
+			"path": "migrations"
+		},
+		{
+			"path": "myenv"
+		},
+		{
+			"path": "static"
+		},
+		{
+			"path": "templates"
+		}
+	]
+}

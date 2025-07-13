@@ -3,29 +3,91 @@
 {% block title %}Catálogo - Delicious Orders{% endblock %}
 
 {% block content %}
-<section>
-    <h1>Catálogo</h1>
-    <form method="POST" action="{{ url_for('catalogo') }}">
-        <div class="productos">
-            {% for producto in productos %}
-            <div class="producto">
-                <input type="checkbox" name="productos" value="{{ producto.id }}" id="producto-{{ producto.id }}">
-                <label for="producto-{{ producto.id }}">
-                    <h2>{{ producto.nombre }}</h2>
-                    <p>{{ producto.descripcion }}</p>
-                    <p class="precio">Precio: ${{ producto.precio }}</p>
-                </label>
+<section class="catalogo-section">
+    <h2 class="catalogo-titulo text-center mb-5">🍽️ Catálogo de Delicious Orders 🍹</h2>
+
+    <!-- Entradas -->
+    <div class="categoria-catalogo mb-4">
+        <h3 class="categoria-titulo">Entradas</h3>
+        <div class="catalogo-grid">
+            <div class="catalogo-card">
+                <img src="{{ url_for('static', filename='catalogo_img/entrada1.jpg') }}" class="catalogo-img" alt="Bruschettas">
+                <div class="card-body">
+                    <h5 class="card-title">Bruschettas</h5>
+                    <p class="card-text">Pan tostado con tomate, ajo, albahaca y aceite de oliva.</p>
+                </div>
             </div>
-            {% endfor %}
+            <div class="catalogo-card">
+                <img src="{{ url_for('static', filename='catalogo_img/entrada2.jpg') }}" class="catalogo-img" alt="Empanadas">
+                <div class="card-body">
+                    <h5 class="card-title">Empanadas</h5>
+                    <p class="card-text">Variedad de empanadas caseras: carne, pollo, jamón y queso.</p>
+                </div>
+            </div>
+            <div class="catalogo-card">
+                <img src="{{ url_for('static', filename='catalogo_img/entrada3.jpg') }}" class="catalogo-img" alt="Ensalada César">
+                <div class="card-body">
+                    <h5 class="card-title">Ensalada César</h5>
+                    <p class="card-text">Lechuga fresca, croutones, parmesano y aderezo César.</p>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="metodo_pago">Método de Pago</label>
-            <select name="metodo_pago" id="metodo_pago" class="form-control">
-                <option value="tarjeta">Tarjeta</option>
-                <option value="efectivo">Efectivo</option>
-            </select>
+    </div>
+
+    <!-- Platos principales -->
+    <div class="categoria-catalogo mb-4">
+        <h3 class="categoria-titulo">Platos Principales</h3>
+        <div class="catalogo-grid">
+            <div class="catalogo-card">
+                <img src="{{ url_for('static', filename='catalogo_img/plato1.jpg') }}" class="catalogo-img" alt="Pizza Margarita">
+                <div class="card-body">
+                    <h5 class="card-title">Pizza Margarita</h5>
+                    <p class="card-text">Masa artesanal, salsa de tomate, mozzarella y albahaca fresca.</p>
+                </div>
+            </div>
+            <div class="catalogo-card">
+                <img src="{{ url_for('static', filename='catalogo_img/plato2.jpg') }}" class="catalogo-img" alt="Hamburguesa Gourmet">
+                <div class="card-body">
+                    <h5 class="card-title">Hamburguesa Gourmet</h5>
+                    <p class="card-text">Carne premium, queso cheddar, panceta, lechuga y tomate.</p>
+                </div>
+            </div>
+            <div class="catalogo-card">
+                <img src="{{ url_for('static', filename='catalogo_img/plato3.jpg') }}" class="catalogo-img" alt="Pasta Alfredo">
+                <div class="card-body">
+                    <h5 class="card-title">Pasta Alfredo</h5>
+                    <p class="card-text">Fettuccine con salsa cremosa de queso parmesano y pollo.</p>
+                </div>
+            </div>
         </div>
-        <button type="submit" class="btn btn-primary">Crear Pedido</button>
-    </form>
+    </div>
+
+    <!-- Bebidas -->
+    <div class="categoria-catalogo mb-4">
+        <h3 class="categoria-titulo">Bebidas</h3>
+        <div class="catalogo-grid">
+            <div class="catalogo-card">
+                <img src="{{ url_for('static', filename='catalogo_img/bebida1.jpg') }}" class="catalogo-img" alt="Limonada">
+                <div class="card-body">
+                    <h5 class="card-title">Limonada</h5>
+                    <p class="card-text">Refrescante limonada casera con menta y hielo.</p>
+                </div>
+            </div>
+            <div class="catalogo-card">
+                <img src="{{ url_for('static', filename='catalogo_img/bebida2.jpg') }}" class="catalogo-img" alt="Cerveza Artesanal">
+                <div class="card-body">
+                    <h5 class="card-title">Cerveza Artesanal</h5>
+                    <p class="card-text">Selección de cervezas artesanales locales.</p>
+                </div>
+            </div>
+            <div class="catalogo-card">
+                <img src="{{ url_for('static', filename='catalogo_img/bebida3.jpg') }}" class="catalogo-img" alt="Vino Tinto">
+                <div class="card-body">
+                    <h5 class="card-title">Vino Tinto</h5>
+                    <p class="card-text">Vinos seleccionados de bodegas reconocidas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 {% endblock %}
