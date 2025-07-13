@@ -1,22 +1,19 @@
 ---
 
-### ✅ README profesional con color, íconos y visuales mejorados
+<!-- Encabezado centrado con badges visuales -->
 
-````markdown
-<div align="center">
+<p align="center">
+  <img src="https://img.shields.io/badge/Flask-2.3-blue?logo=flask" />
+  <img src="https://img.shields.io/badge/PostgreSQL-17.4-blue?logo=postgresql" />
+  <img src="https://img.shields.io/badge/Docker-ready-blue?logo=docker" />
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+</p>
 
-<img src="https://img.shields.io/badge/Flask-2.3-blue?logo=flask" />
-<img src="https://img.shields.io/badge/PostgreSQL-17.4-blue?logo=postgresql" />
-<img src="https://img.shields.io/badge/Docker-ready-blue?logo=docker" />
-<img src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+<h1 align="center">🍔 Delicias Order · <code>restaurant_db</code></h1>
 
-# 🍔 **Delicias Order · `restaurant_db`**
-Sistema de gestión para restaurantes  
-📦 Contenedorizado con Docker · ⚙️ Backend con Flask · 🐘 Base de datos PostgreSQL  
-
-</div>
-
----
+<p align="center">
+Sistema de gestión para restaurantes desarrollado con Flask, PostgreSQL y Docker.
+</p>---
 
 ## 🍽️ Descripción del Proyecto
 
