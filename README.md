@@ -128,13 +128,10 @@ alembic upgrade head
 ---
 
 ## 🧑‍💻 Autor
-
-**Bruno Ríos**
-📫 [brunorioscorp4@gmail.com](mailto:brunorioscorp4@gmail.com)
-💼 [LinkedIn](https://www.linkedin.com/in/bruno-rios)
-🌐 Proyecto asociado: **Delicias Order**
-
----
+##Bruno Rios
+📫 brunorioscorp4@gmail.com
+💼 LinkedIn
+🌐 Proyecto asociado: Delicius Order---
 
 ## 🪪 Licencia
 
